@@ -1,60 +1,60 @@
-.container{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   width: 100%;
-   height: 100%;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
-.tootip-wrapper{
-   display: flex;
-   flex-direction: column;
-   height: 150px;
-   width: 400px;
-   align-items: center;
-   gap: 4px;
+.tootip-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
 }
-.tooltip-text{
-   cursor: pointer;
-   font-size: x-large;
-   font-weight: bold;
-   font-family: sans-serif;
-   height: 50px;
-   border-radius: 1rem;
-   width: 150px;
-   text-align: center;
-   padding-top: 12px;
-   position: relative;
-   background-color: black;
-   color: white;
+.tooltip-text {
+  cursor: pointer;
+  font-size: x-large;
+  font-weight: bold;
+  font-family: sans-serif;
+  height: 50px;
+  border-radius: 1rem;
+  width: 200px;
+  text-align: center;
+  padding-top: 12px;
+  position: relative;
+  background-color: black;
+  color: white;
 }
-.tooltip-text::before{
-   content: "";
-   position: absolute;
-   left: 50%;
-   top: 100%;
-   border: 15px solid black;
-   border-color: #000 #0000 #0000 #0000;
-
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  border: 15px solid black;
+  border-color: #000 #0000 #0000 #0000;
 }
-.navbar-wrapper{
-   display: flex;
-   gap: 7px;
-   opacity: 0;
-   transition: 0.4s;
-   visibility: hidden;
-  
+.navbar-wrapper {
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  border: 1px solid black;
+  border-radius: 1rem;
 }
-.nav-link{
-   font-size: x-large;
-   text-decoration: none;
-   color: black;
- 
-
+.nav-link {
+  font-size: x-large;
+  text-decoration: none;
+  color: black;
+  padding: 12px;
 }
-.tooltip-text:hover , .navbar-wrapper{
-   top: -130%;
-   visibility: visible;
-   opacity: 1;
+.home,
+.projects {
+  border-right: 1px solid black;
 }
-
+ .tootip-wrapper:hover > .navbar-wrapper {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  transition: 2s;
+}
